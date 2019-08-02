@@ -1,6 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import UserForm from './Pages/User/Form';
+import UserList from './Pages/User/List';
+import Input from './Components/Input/Input';
+import Modal from './Components/Modal/Modal';
+
 
 function App() {
   return (
