@@ -17,8 +17,8 @@ function App() {
       label="Nome"
       />
       <Selected
-      label="Estado"
-      list={["SP", "RJ", "MG"]}
+        label="Estado"
+        list={["SP", "RJ"]}
       />
     </div>
   );

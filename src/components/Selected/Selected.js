@@ -4,8 +4,8 @@ const Selected = ({ list, label }) => {
     
     let html = <option>Nenhum encontrado</option>
 
-    if(list !== null && list.lenght > 0)
-    {
+    if(list !== null && list.length > 0)
+    {                        
        html = list.map(value => (
             <option>{value}</option>
         ));
