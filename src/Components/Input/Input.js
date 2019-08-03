@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 // npm install --save prop-types
 
 class Input extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         
         const {initialValue} = this.props
 
@@ -32,7 +32,7 @@ Input.propTypes = {
     label: PropTypes.string.isRequired,
 }
 
-Input.default.props = {
+Input.defaultProps = {
     type: "text",
     initialValue: ""
 }
