@@ -1,13 +1,14 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class Input extends Component {
     constructor(){
         super()
         
-        const {initialValue} = this.state.initialValue
+        const {initialValue} = this.props
 
         this.state = {
-            valueInput: initialValue
+            value: initialValue
         }
     }
 
@@ -17,10 +18,21 @@ class Input extends Component {
         return (
             <div>
                 <label>{label}</label>
-                <input type={type} value={this.state.value}></input>
+                <input id={id} type={type} value={this.state.value}></input>
             </div>
         )
     }
+}
+
+Input.propTypes = {
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string,
+    label: PropTypes.string.isRequired,
+}
+
+Input.default.props = {
+    type: "text",
+    initialValue: ""
 }
 
 export default  Input
